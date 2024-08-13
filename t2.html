@@ -32,14 +32,17 @@
     <script>
         const selectElement = document.getElementById('multiSelect');
         const selectedItemsText = document.getElementById('selectedItemsText');
-    
+
+        // 初始化时设置默认文本为 "請選擇"
+        selectedItemsText.textContent = "請選擇";
+
         selectElement.addEventListener('change', function() {
             const selectedOptions = Array.from(selectElement.selectedOptions);
             const selectedCount = selectedOptions.length;
-    
+
             // 根据选项数量更新文本
             if (selectedCount === 0) {
-                selectedItemsText.textContent = "No items selected";
+                selectedItemsText.textContent = "請選擇";
             } else if (selectedCount === 1) {
                 selectedItemsText.textContent = `1 item selected: ${selectedOptions[0].text}`;
             } else {

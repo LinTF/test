@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+</head>
+<body>
+	<div class="FunctionArea">
+		<div>
+			<input name="addBtn" type="button" value="新增" class="InputButton" onClick="javascript:doAction(this.form, 'doAdd')" />
+		</div>
+
+
+		<div>
+			<input name="updateBtn" type="button" value="修改" class="InputButton" onClick="javascript:doAction(this.form, 'doUpdate')" />
+			<button id="doDelete_ConfirmOpen" class="InputButton" type="button">icon - 刪除</button>
+		</div>
+	</div>
+	<div class="FunctionArea" id="doDelete_ConfirmDialog" style="display:block">
+		<table>
+			<tr>
+				<td class="Label" colspan="2" align="center"><label id="DeleteReasonLabel" name="DeleteReasonLabel">abc</label></td>  
+			</tr>
+			<tr>
+				<td class="Label" colspan="2" align="center">刪除事由：
+				<p>測試文字</p>
+			</tr>
+			<tr>
+				<td colspan="2" align="center">
+					<div>
+						<input id="doDeleteBtn" name="deleteBtn" type="button" value="是" class="InputButton" onClick="javascript:doAction(document.forms[0], 'doDelete')" />
+
+						<button id="doDeleteDialogNo" class="InputButton" type="button">icon - 否</button>
+					</div>
+				</td>  
+			</tr>
+		</table>
+	</div>   
+</body>
+</html>
